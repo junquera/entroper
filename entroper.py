@@ -36,6 +36,7 @@ for i in range(n_blocks):
     entropies.append(e)
 
 fig, ax = plt.subplots()
+fig.suptitle('Entropy', fontsize=16)
 
 index = np.arange(n_blocks)
 
@@ -44,7 +45,7 @@ print(n_blocks, BLOCK_SIZE, global_entropy)
 ax.bar((index * BLOCK_SIZE) + (BLOCK_SIZE/2) , entropies, BLOCK_SIZE, label="Entropy of %dB blocks" % BLOCK_SIZE)
 ax.plot((index * BLOCK_SIZE) + (BLOCK_SIZE/2) , np.repeat(global_entropy, n_blocks), '--', color='red', label="Global entropy")
 
-ax.set_title("%s entropy" % (file_name))
+ax.set_title("%s" % (file_name))
 ax.legend(loc="lower right")
 
 # Entropía entre 0 y 8 (bits)
