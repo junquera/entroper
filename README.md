@@ -8,28 +8,12 @@ Measure how random a file is to detect compression, encryption, or low-entropy d
 
 Usage
 -----
-entroper [options] <path|->  
-Use `-` or omit the path to read from stdin.
+entroper [options] <path>
 
 Examples
 --------
 - Measure a file:
-  entroper file.bin
-
-- From a pipe:
-  gzip -c image.png | entroper -
-
-- JSON output:
-  entroper --json file.bin
-
-Common options
---------------
-- -h, --help        Show help
-- -j, --json        Output JSON
-- -H, --hist        Print byte-value histogram (0x00–0xFF)
-- -b, --block-size N  Process in blocks of N bytes
-- --per-block       Show entropy per block
-- --threshold T     Exit nonzero if entropy above/below T
+1.   entroper file.bin
 
 Interpretation
 --------------
